@@ -9,7 +9,7 @@ class EmailController extends BaseController {
         $password = Config::get('imap.password');
         if($hostname == "{imat.to.the.server.with.port}" && $email == 'email@email' && $password == "password")
         {
-            return "PLEASE PROVIDE CREDITENCIALS";
+            return "PLEASE PROVIDE CREDITENCIALS IN config/imap.php";
         }
         $folder = "INBOX";
         /* try to connect */
