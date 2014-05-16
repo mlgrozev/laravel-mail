@@ -7,6 +7,10 @@ class EmailController extends BaseController {
         $hostname = Config::get('imap.hostname');
         $email = Config::get('imap.email');
         $password = Config::get('imap.password');
+        if($hostname == "{imat.to.the.server.with.port}" && $email == 'email@email' && $password == "password")
+        {
+            return "PLEASE PROVIDE CREDITENCIALS";
+        }
         $folder = "INBOX";
         /* try to connect */
         $imap = imap_open($hostname, $email, $password) or die('Cannot connect to Gmail: ' . imap_last_error());
